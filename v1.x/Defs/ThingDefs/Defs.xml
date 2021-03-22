@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ReligionsOfRimworld.ReligionDef>
+		<defName>ZzZombo_ChildrenOfAtom</defName>
+		<label>Children of Atom</label>
+		<description>The religion of the Children of Atom is centered around the eponymous Atom and the idea that within every atomic mass in all of creation exists an entire universe. When that atomic mass is split, that universe divides and becomes two. As such, Atom is a creator deity, creating new worlds through the act of nuclear fission (referred to by the Children as Division). As a result, the Great War is seen and cherished as a divine event that created uncountable new universes in one instant. It represents creation and unification in Atom's Glow - radiation. The Children worship Atom by worshiping radiation, his Glow, emphasizing its ability to transform and create something better. Through it, they can achieve the aforementioned Division, as the Glow breaks them apart and they are reborn, releasing all of the worlds within them. While obliteration through nuclear explosions is a preferred means of achieving Division, death of natural causes or irradiation is considered perfectly in line with the Children's teachings. To maintain their devotion and worship, the Children tend to seek out irradiated areas to set up shrines and other centers of worship, which double as staging areas for proselytizing efforts and crusades against the unfaithful. They will also seek out and defend any stockpiles of nuclear weapons, to prevent their disposal or use in a manner not consistent with the tenets of the teachings of Atom.\n\nThe religion emphasizes asceticism and abolition of the self, as the mortal shell is seen as merely the means for creating new life. However, the Children are not pacifists. Territory affected by radiation is considered Atom's holy domain, wreathed in his Glow. The Children are compelled by their religion to protect their path to salvation (Division), through any means necessary. As a result, any attempts to interfere with the spread of radiation is considered blasphemous. However, reason does temper the religious zeal somewhat. For instance, anti-radiation medication is accepted, as it seen as the means for those denied radiation immunity (seen as a special kind of Atom's blessing) to serve Atom. In fact, it seen as a form of penitence, scouring oneself to embrace the Glow anew.\n\nOne crucial aspect of the Children of Atom's beliefs is revelation. Atom is believed to appear before its faithful as a variety of messengers, with the Mother of the Fog being the most revered among the Far Harbor sect. This figure, shrouded in black mist and smoke, heralds the most important events and its appearance is credited by Confessors of the Nucleus with the survival of their community, after banishment from Far Harbor. Minor revelations can be delivered to individuals by other messengers, such as a radiant stag. This belief in individual revelation also means that the precise tenets of the Children of Atom are constantly in flux and sufficiently charismatic Confessors can radically alter the course their community takes, from peaceful coexistence to militant expansion and vice-versa.\n\nReligious iconography of the Children is based on scientific diagrams representing atoms.</description>
+		<settingsDefs>
+			<li>RoR_NeedPietySettings</li>
+			<li>RoR_TalksSettings</li>
+			<li>RoR_IncidentsSettings</li>
+			<li>RoR_MentalBreaksSettings</li>
+			<li>ZzZCOTA_JoiningCriteria1</li>
+			<!-- <li>ZzZCOTA_JoiningCriteria2</li> -->
+			<li>ZzZCOTA_AllowedBuildingsSettings</li>
+			<li>ZzZCOTA_WorshipSettings</li>
+			<li>ZzZCOTA_PrayingSettings</li>
+			<li>ZzZCOTA_ApparelSettings</li>
+		</settingsDefs>
+	</ReligionsOfRimworld.ReligionDef>
+	<ReligionsOfRimworld.ReligionSettingsDef ParentName="RoRJoiningCriteriaBase">
+		<defName>ZzZCOTA_JoiningCriteria1</defName>
+		<settings Class="ReligionsOfRimworld.ReligionSettings_JoiningCriteria">
+			<criteria>
+				<li Class="ReligionsOfRimworld.JoiningCriteria_Race">
+					<criteria>
+						<li>Human</li>
+					</criteria>
+					<importance>Important</importance>
+				</li>
+				<li Class="ReligionsOfRimworld.JoiningCriteria_Trait">
+					<criteria>Psychopath</criteria>
+					<importance>Regular</importance>
+				</li>
+				<!-- <li Class="ReligionsOfRimworld.JoiningCriteria_Hediff"> <criteria>ToxicBuildup</criteria> <importance>Regular</importance> </li> -->
+			</criteria>
+		</settings>
+	</ReligionsOfRimworld.ReligionSettingsDef>
+	<!-- <ReligionsOfRimworld.ReligionSettingsDef ParentName="RoRJoiningCriteriaBase"> <defName>ZzZCOTA_JoiningCriteria2</defName> <settings Class="ReligionsOfRimworld.ReligionSettings_JoiningCriteria"> <criteria> <li Class="ReligionsOfRimworld.JoiningCriteria_Race"> <criteria> <li>Human</li> </criteria> <importance>Regular</importance> </li> <li Class="ReligionsOfRimworld.JoiningCriteria_Trait"> <criteria>Psychopath</criteria> <importance>Critical</importance> <shouldHave>true</shouldHave> </li> </criteria> </settings> </ReligionsOfRimworld.ReligionSettingsDef> -->
+	<ReligionsOfRimworld.ReligionSettingsDef ParentName="RoRAllowedBuildingsSettingsBase">
+		<defName>ZzZCOTA_AllowedBuildingsSettings</defName>
+		<settings Class="ReligionsOfRimworld.ReligionSettings_AllowedBuildings">
+			<allowedBuildings>
+				<li>ZzZCOTA_Relic</li>
+				<li>ZzZCOTA_Altar</li>
+			</allowedBuildings>
+		</settings>
+	</ReligionsOfRimworld.ReligionSettingsDef>
+	<ReligionsOfRimworld.ReligionSettingsDef ParentName="RoRWorshipSettingsBase">
+		<defName>ZzZCOTA_WorshipSettings</defName>
+		<settings Class="ReligionsOfRimworld.ReligionSettings_ReligionActivity">
+			<properties>
+				<li Class="ReligionsOfRimworld.ReligionProperty_ActivityTaskDef">
+					<propertyObject>RoR_TaskWorship</propertyObject>
+					<subject>
+						<piety>RoR_PietyWorshipAverage</piety>
+					</subject>
+					<witness>
+						<piety>RoR_PietyWorshipSmall</piety>
+					</witness>
+				</li>
+			</properties>
+		</settings>
+	</ReligionsOfRimworld.ReligionSettingsDef>
+	<ReligionsOfRimworld.ReligionSettingsDef ParentName="RoRPrayingSettingsBase">
+		<defName>ZzZCOTA_PrayingSettings</defName>
+		<settings Class="ReligionsOfRimworld.ReligionSettings_Prayings">
+			<prayNeed>Pray</prayNeed>
+			<property Class="ReligionsOfRimworld.ReligionProperty_JobDef">
+				<propertyObject>PrayJob</propertyObject>
+				<subject>
+					<piety>RoR_PietyPrayAverage</piety>
+				</subject>
+			</property>
+		</settings>
+	</ReligionsOfRimworld.ReligionSettingsDef>
+	<ThingDef Name="ZzZCOTA_AltarBase" ParentName="SculptureBase" Abstract="True">
+		<thingSetMakerTags></thingSetMakerTags>
+		<passability>Impassable</passability>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Building/Art/SculptureSmall</texPath>
+		</graphicData>
+		<fillPercent>0.35</fillPercent>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>90</MaxHitPoints>
+			<Mass>3</Mass>
+			<Beauty>50</Beauty>
+			<WorkToMake>1400</WorkToMake>
+		</statBases>
+		<tradeTags></tradeTags>
+		<stuffCategories>
+			<li>Uranium</li>
+		</stuffCategories>
+		<costStuffCount>50</costStuffCount>
+		<thingClass>ReligionsOfRimworld.Building_ReligiousBuildingMain</thingClass>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<designationCategory>ReligionBuildings</designationCategory>
+		<building>
+			<watchBuildingStandDistanceRange>
+				<min>2</min>
+				<max>8</max>
+			</watchBuildingStandDistanceRange>
+			<watchBuildingStandRectWidth>7</watchBuildingStandRectWidth>
+		</building>
+	</ThingDef>
+	<ThingDef ParentName="ZzZCOTA_AltarBase">
+		<defName>ZzZCOTA_Relic</defName>
+		<label>mother icon</label>
+		<description>The small statue appears to be a carved uranium idol and is important to the initiation ritual of the Children of Atom. Those who Atom deems fit to guide to the idol are accepted into the fold. The icon is most likely a representation of the shadowy figure known as the Mother of the Fog.</description>
+	</ThingDef>
+	<ThingDef ParentName="ZzZCOTA_AltarBase">
+		<defName>ZzZCOTA_Altar</defName>
+		<label>atomic altar</label>
+		<description>The small statue appears to be a carved uranium idol and is important to the initiation ritual of the Children of Atom. Those who Atom deems fit to guide to the idol are accepted into the fold. The icon is most likely a representation of the shadowy figure known as the Mother of the Fog.</description>
+		<thingClass>ReligionsOfRimworld.Building_ReligiousBuildingFacility</thingClass>
+		<interactionCellIcon>DiningChair</interactionCellIcon>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<tickerType>Rare</tickerType>
+		<inspectorTabs>
+			<li>ReligionsOfRimworld.ITab_ActivityTasks</li>
+		</inspectorTabs>
+	</ThingDef>
+	<StuffCategoryDef>
+		<defName>Uranium</defName>
+		<label>uranium</label>
+		<destroySoundSmall>BuildingDestroyed_Metal_Small</destroySoundSmall>
+		<destroySoundMedium>BuildingDestroyed_Metal_Medium</destroySoundMedium>
+		<destroySoundLarge>BuildingDestroyed_Metal_Big</destroySoundLarge>
+	</StuffCategoryDef>
+	<ThingDef ParentName="ApparelNoQualityBase">
+		<defName>Apparel_ZzZCOTA_Book</defName>
+		<label>Atom's Will</label>
+		<description>Scripture on the power of Atom. Notes and instructions on how one can reach unity within division.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/ZzZCOTA_Book/Book</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Medieval</techLevel>
+		<tradeability>None</tradeability>
+		<statBases>
+			<Mass>2</Mass>
+			<WorkToMake>200</WorkToMake>
+			<Flammability>0.8</Flammability>
+			<EquipDelay>0.5</EquipDelay>
+		</statBases>
+		<thingSetMakerTags></thingSetMakerTags>
+		<costList>
+			<Cloth>75</Cloth>
+			<Uranium>10</Uranium>
+		</costList>
+		<stuffCategories>
+			<li>Leathery</li>
+		</stuffCategories>
+		<costStuffCount>10</costStuffCount>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Intellectual</workSkill>
+			<effectWorking>Tailor</effectWorking>
+			<soundWorking>Recipe_Tailor</soundWorking>
+			<recipeUsers>
+				<li>HandTailoringBench</li>
+				<li>ElectricTailoringBench</li>
+			</recipeUsers>
+			<useIngredientsForColor>false</useIngredientsForColor>
+			<skillRequirements></skillRequirements>
+		</recipeMaker>
+		<thingCategories>
+			<li>ApparelUtility</li>
+		</thingCategories>
+		<tickerType>Normal</tickerType>
+		<apparel>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<careIfDamaged>false</careIfDamaged>
+			<wearPerDay>0</wearPerDay>
+			<bodyPartGroups>
+				<li>Waist</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Belt</li>
+			</layers>
+			<tags>
+				<li>BeltDefense</li>
+			</tags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(0.33,0.33,0.33,1)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.65,0.65,0.65,1)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>(0.3,0.3,0.3,1)</min>
+					<max>(0.5,0.5,0.5,1)</max>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(0.9,0.9,0.9,1)</only>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+	<ReligionsOfRimworld.ReligionSettingsDef ParentName="RoRApparelSettingsBase">
+		<defName>ZzZCOTA_ApparelSettings</defName>
+		<settings Class="ReligionsOfRimworld.ReligionSettings_Social">
+			<properties>
+				<li Class="ReligionsOfRimworld.ReligionProperty_ThingDef">
+					<propertyObject>Apparel_ZzZCOTA_Book</propertyObject>
+					<subject>
+						<piety>RoR_PietyApparelGood</piety>
+					</subject>
+				</li>
+			</properties>
+		</settings>
+	</ReligionsOfRimworld.ReligionSettingsDef>
+</Defs>

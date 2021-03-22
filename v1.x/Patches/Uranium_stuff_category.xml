@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="Uranium"]/stuffProps/categories</xpath>
+		<value>
+			<li>Uranium</li>
+		</value>
+	</Operation>
+</Patch>
