@@ -74,7 +74,7 @@
 		</settings>
 	</ReligionsOfRimworld.ReligionSettingsDef>
 	<ThingDef Name="ZzZCOTA_AltarBase" ParentName="SculptureBase" Abstract="True">
-		<thingSetMakerTags></thingSetMakerTags>
+		<thingSetMakerTags Inherit="False" />
 		<passability>Impassable</passability>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
 		<graphicData>
@@ -89,7 +89,7 @@
 			<Beauty>50</Beauty>
 			<WorkToMake>1400</WorkToMake>
 		</statBases>
-		<tradeTags></tradeTags>
+		<tradeTags Inherit="False" />
 		<stuffCategories>
 			<li>Uranium</li>
 		</stuffCategories>
@@ -113,8 +113,13 @@
 	<ThingDef ParentName="ZzZCOTA_AltarBase">
 		<defName>ZzZCOTA_Altar</defName>
 		<label>atomic altar</label>
-		<description>The small statue appears to be a carved uranium idol and is important to the initiation ritual of the Children of Atom. Those who Atom deems fit to guide to the idol are accepted into the fold. The icon is most likely a representation of the shadowy figure known as the Mother of the Fog.</description>
+		<description>A radioactive barrel of waste the high confessor uses in order to bring his flock closer to atoms everlasting glow and pray for division.</description>
 		<thingClass>ReligionsOfRimworld.Building_ReligiousBuildingFacility</thingClass>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Building/Art/ZzZCOTA_Altar</texPath>
+			<drawSize>(0.7,1)</drawSize>
+		</graphicData>
 		<interactionCellIcon>DiningChair</interactionCellIcon>
 		<hasInteractionCell>True</hasInteractionCell>
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
@@ -122,6 +127,10 @@
 		<inspectorTabs>
 			<li>ReligionsOfRimworld.ITab_ActivityTasks</li>
 		</inspectorTabs>
+		<costStuffCount>75</costStuffCount>
+		<costList>
+			<Steel>200</Steel>
+		</costList>
 	</ThingDef>
 	<StuffCategoryDef>
 		<defName>Uranium</defName>
@@ -137,6 +146,7 @@
 		<graphicData>
 			<texPath>Things/Pawn/Humanlike/Apparel/ZzZCOTA_Book/Book</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.75</drawSize>
 		</graphicData>
 		<tradeability>None</tradeability>
 		<statBases>
@@ -145,7 +155,7 @@
 			<Flammability>0.8</Flammability>
 			<EquipDelay>0.5</EquipDelay>
 		</statBases>
-		<thingSetMakerTags></thingSetMakerTags>
+		<thingSetMakerTags Inherit="False" />
 		<costList>
 			<Cloth>75</Cloth>
 			<Uranium>10</Uranium>
@@ -182,9 +192,6 @@
 				<li>Belt</li>
 			</layers>
 		</apparel>
-		<comps Inherit="False">
-			<li Class="CompProperties_Forbiddable" />
-		</comps>
 	</ThingDef>
 	<ReligionsOfRimworld.ReligionSettingsDef ParentName="RoRApparelSettingsBase">
 		<defName>ZzZCOTA_ApparelSettings</defName>
