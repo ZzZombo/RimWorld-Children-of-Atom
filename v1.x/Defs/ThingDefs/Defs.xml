@@ -138,7 +138,6 @@
 			<texPath>Things/Pawn/Humanlike/Apparel/ZzZCOTA_Book/Book</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
-		<techLevel>Medieval</techLevel>
 		<tradeability>None</tradeability>
 		<statBases>
 			<Mass>2</Mass>
@@ -166,13 +165,13 @@
 				<li>ElectricTailoringBench</li>
 			</recipeUsers>
 			<useIngredientsForColor>false</useIngredientsForColor>
-			<skillRequirements></skillRequirements>
 		</recipeMaker>
 		<thingCategories>
 			<li>ApparelUtility</li>
 		</thingCategories>
 		<tickerType>Normal</tickerType>
 		<apparel>
+			<scoreOffset>4</scoreOffset>
 			<careIfWornByCorpse>false</careIfWornByCorpse>
 			<careIfDamaged>false</careIfDamaged>
 			<wearPerDay>0</wearPerDay>
@@ -182,31 +181,10 @@
 			<layers>
 				<li>Belt</li>
 			</layers>
-			<tags>
-				<li>BeltDefense</li>
-			</tags>
 		</apparel>
-		<colorGenerator Class="ColorGenerator_Options">
-			<options>
-				<li>
-					<weight>10</weight>
-					<only>(0.33,0.33,0.33,1)</only>
-				</li>
-				<li>
-					<weight>10</weight>
-					<only>(0.65,0.65,0.65,1)</only>
-				</li>
-				<li>
-					<weight>6</weight>
-					<min>(0.3,0.3,0.3,1)</min>
-					<max>(0.5,0.5,0.5,1)</max>
-				</li>
-				<li>
-					<weight>10</weight>
-					<only>(0.9,0.9,0.9,1)</only>
-				</li>
-			</options>
-		</colorGenerator>
+		<comps Inherit="False">
+			<li Class="CompProperties_Forbiddable" />
+		</comps>
 	</ThingDef>
 	<ReligionsOfRimworld.ReligionSettingsDef ParentName="RoRApparelSettingsBase">
 		<defName>ZzZCOTA_ApparelSettings</defName>
