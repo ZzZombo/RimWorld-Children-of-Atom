@@ -77,10 +77,6 @@
 		<thingSetMakerTags Inherit="False" />
 		<passability>Impassable</passability>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
-		<graphicData>
-			<graphicClass>Graphic_Random</graphicClass>
-			<texPath>Things/Building/Art/SculptureSmall</texPath>
-		</graphicData>
 		<fillPercent>0.35</fillPercent>
 		<rotatable>false</rotatable>
 		<statBases>
@@ -109,6 +105,10 @@
 		<defName>ZzZCOTA_Relic</defName>
 		<label>mother icon</label>
 		<description>The small statue appears to be a carved uranium idol and is important to the initiation ritual of the Children of Atom. Those who Atom deems fit to guide to the idol are accepted into the fold. The icon is most likely a representation of the shadowy figure known as the Mother of the Fog.</description>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Building/Art/MotherOfTheFog</texPath>
+		</graphicData>
 	</ThingDef>
 	<ThingDef ParentName="ZzZCOTA_AltarBase">
 		<defName>ZzZCOTA_Altar</defName>
